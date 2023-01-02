@@ -1,0 +1,29 @@
+<app-adminh></app-adminh>
+
+<h1 class="heading">List of Policies</h1>
+
+<table id="customers">
+ <thead>
+  <tr>
+    <th>Id</th>
+    <th>Policy Name</th>
+    <th>Policy Category</th>
+    <th>Policy Coverage Amount</th>
+    <th>Policy Coverage (in years)</th>
+    <th colspan="2">Actions</th>
+  </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let obj of pol">
+         <td>{{obj.policyId}}</td>
+         <td>{{obj.policyName}}</td>
+         <td>{{obj.category}}</td>
+         <td>{{obj.amount}}</td>
+         <td>{{obj.tenureInYears}}</td>
+         <td><button class="btn btn-warning" (click)="updatePolicy()" type="submit">Update</button></td>
+         <td><button class="btn btn-danger" (click)="deletePolicy(obj)" type="submit">Delete</button></td>
+    </tr>
+
+</tbody>
+</table>
+

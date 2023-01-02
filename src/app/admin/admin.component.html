@@ -1,0 +1,30 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<div class="form-bg">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
+              <div class="form-container">
+                  <div class="form-icon">
+                      <i class="fa fa-user-edit"></i>
+                  </div>
+                  <h3 class="title">Admin Login</h3>
+                  <form class="form-horizontal" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                      <div class="form-group">
+                          <span class="input-icon"><i class="fa fa-user"></i></span>
+                          <input type="text" id="username" name="username" class="form-control is-invalid" #name="ngModel"
+                    placeholder="Email" [(ngModel)]="adminModel.username">
+                      </div>
+                      <div class="form-group">
+                          <span class="input-icon"><i class="fa fa-lock"></i></span>
+                          <input type="password" id="password" name="password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control"
+                    placeholder="Password" [(ngModel)]="adminModel.password">
+                      </div>
+                      <button class="btn signin" type="submit">Login</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

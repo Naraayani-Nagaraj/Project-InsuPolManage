@@ -1,0 +1,22 @@
+<app-adminh></app-adminh>
+
+<div id="exampleModal">
+  <div class="container">
+      <div>
+          <h2>Update Policy details</h2>
+          <form (ngSubmit)="updatePolicyAll()">
+              <label>Policy ID</label><br>
+              <input type="number" name="policy_id" /><br><br>
+              <label>Policy Name</label><br>
+              <input type="text" name="policyName" [(ngModel)]="obj.policyName" /><br><br>
+              <label>Amount</label><br>
+              <input type="text" name="amount" [(ngModel)]="obj.amount" /><br><br>
+              <label>Policy Coverage (in years)</label><br>
+              <input type="number" name="tenureInYears" [(ngModel)]="obj.tenureInYears" /><br><br>
+              <label>Policy Category</label><br>
+              <input type="text" name="category" [(ngModel)]="obj.category" /><br><br>
+              <button style="margin:5px;" type="submit" class="btn btn-primary bn">Update Policy</button>
+          </form>
+      </div>
+  </div>
+
